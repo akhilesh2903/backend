@@ -41,7 +41,7 @@ from flask_cors import CORS
 
 # Initialize Flask app
 app = Flask(__name__, template_folder='../frontend/templates', static_folder='../frontend/static')
-CORS(app)
+CORS(app, resources={r"/*": {"origins": ["https://frontend-seven-gamma-51.vercel.app", "http://localhost:3000"]}})
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024  # 50MB max file size
 # ONLY allow medical imaging formats — NO GIF, NO arbitrary files
