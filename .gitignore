@@ -1,0 +1,11 @@
+
+.venv/
+__pycache__/
+uploads/
+venv/
+.pytest_cache/
+*.pyc
+
+
+.env
+PyWhatKit_DB.txt
