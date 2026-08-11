@@ -29,7 +29,7 @@ FLASK_CONFIG = {
 
 # Model Configuration
 MODEL_CONFIG = {
-    'cnn_model_name': 'resnet50',  # 'resnet50' or 'mobilenet_v2'
+    'cnn_model_name': 'mobilenet_v2',  # 'resnet50' or 'mobilenet_v2'
     'num_classes': 3,
     'device': 'cpu',  # 'cpu' or 'cuda'
     'input_size': 224,

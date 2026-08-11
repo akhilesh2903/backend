@@ -53,7 +53,7 @@ os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 # Initialize pipeline components
 print("[STARTUP] Initializing AI components...")
 try:
-    inference_pipeline = InferencePipeline(model_name='resnet50', device='cpu')
+    inference_pipeline = InferencePipeline(model_name='mobilenet_v2', device='cpu')
     print("[OK] CNN model loaded")
 
     rag_retriever = MedicalKnowledgeRetriever()
