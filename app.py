@@ -40,7 +40,7 @@ from llm.pdf_report_generator import PDFReportGenerator
 from flask_cors import CORS
 
 # Initialize Flask app
-app = Flask(__name__, template_folder='../frontend/templates', static_folder='../frontend/static')
+app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": ["https://frontend-seven-gamma-51.vercel.app", "http://localhost:3000"]}})
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024  # 50MB max file size
@@ -293,8 +293,12 @@ def upload_pdf_to_cloud(filepath):
 
 @app.route('/')
 def index():
-    """Render main dashboard."""
-    return render_template('index.html')
+    """API Root endpoint."""
+    return jsonify({
+        "status": "success",
+        "message": "Backend API is running normally.",
+        "version": "1.0.0"
+    })
 
 
 @app.route('/api/health', methods=['GET'])
